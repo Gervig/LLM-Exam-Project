@@ -12,6 +12,9 @@ Usage:
     python rag_starter.py "Your question here"
     python rag_starter.py "Your question here" --k 5 --chunk-size 400 --compare
     python rag_starter.py "Your question here" --show-chunks
+    
+Results:
+    Txt files with prompt and responses found in responses folder (saved manually).
 """
 
 import argparse
