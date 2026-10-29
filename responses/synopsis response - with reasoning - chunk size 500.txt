@@ -1,0 +1,140 @@
+uv run rag_starter.py "What must the synopsis contain?" --show-chunks --compare
+Loaded 19 chunks from docs/
+
+--- Retrieved chunks ---
+[0.569] exam_project_requirements_llm_for_developers_joint_teaching_draft_v4.md #16
+and retrieval choices.
+   - Results and reflection from the linear regression versus local LLM + RAG comparison, relevant limitations, and possible improvements.
+
+The setup guide is **not included** in the five-page synopsis limit. Document the system sufficiently for another developer to understand and run it.
+
+## Optional Extensions
+
+Additional agents or orchestration (e.g. AutoGen Studio or LangGraph), custom interfaces, alternative locally hosted models, and extra integrations are welcome *
+
+[0.496] exam_project_requirements_llm_for_developers_joint_teaching_draft_v4.md #3
+affects an answer.
+- **4T's prompt engineering:** Apply **Traits, Task, Tone, and Target** meaningfully in the application's prompts or prompt strategy. Show where they are implemented and explain the choices.
+- **Project scope:** Describe the main features of your MVP and, where relevant, what is outside its scope. Aim for a focused, demonstrable MVP rather than unnecessary complexity.
+- **Technical understanding and reflection:** Relate the solution to relevant concepts from the course. Brief
+
+[0.496] exam_project_requirements_llm_for_developers_joint_teaching_draft_v4.md #8
+target. Its RAG collection may contain relevant background information and examples **from the training/reference portion only**, but not the test answers. Document what was retrieved. Do not let the LLM call the regression model or execute regression code to produce its predictions; the aim here is to compare different approaches, not two interfaces to the same algorithm.
+- **Compare and explain:** Show the actual values and both sets of predictions for your selected test cases. Formulate and c
+
+
+=== WITH retrieval ===
+Let me analyze the context to answer the question: "What must the synopsis contain?"
+
+First, I'll look for information about what the synopsis must contain. The context provides several sections:
+
+1. "The setup guide is **not included** in the five-page synopsis limit. Document the system sufficiently for another developer to understand and run it."
+
+2. There's also information about optional extensions, but the question is about what must be in the synopsis.
+
+3. The context mentions "Results and reflection from the linear regression versus local LLM + RAG comparison, relevant limitations, and possible improvements."
+
+4. The context also mentions "4T's prompt engineering" but this seems to be about how to apply the traits in prompts, not what the synopsis must contain.
+
+The key part that directly addresses what the synopsis must contain is: "The setup guide is **not included** in the five-page synopsis limit. Document the system sufficiently for another developer to understand and run it."
+
+This tells us that the synopsis must document the system sufficiently for another developer to understand and run it. It also explicitly states that the setup guide is not included in the five-page limit.
+
+The context also mentions that the synopsis should contain "Results and reflection from the linear regression versus local L. The context states that the RAG collection may contain relevant background information and examples from the training/reference portion only, but not the test answers.
+
+However, the question is specifically asking "What must the synopsis contain?" based on the context.
+
+Let me check if there's any other relevant information:
+
+The context also states: "Do not let the LLM call the regression model or execute regression code to produce its predictions; the aim here is to compare different approaches, not two interfaces to the same algorithm."
+
+But this is more about what the system should NOT do, not what the synopsis must contain.
+
+The most direct answer to "What must the synopsis contain?" from the context is that it must "Document the system sufficiently for another developer to understand and run it."
+
+Also, the context mentions "Results and reflection from the linear regression versus local LLM + RAG comparison, relevant limitations, and possible improvements" as something that should be in the synopsis.
+
+Let me formulate a concise answer that sticks to what the context explicitly states must be in the synopsis.
+
+From the context: "The setup guide is **not included** in the five-page synopsis limit. Document the system sufficiently for another developer to understand and run it."
+
+So the synopsis must contain: documentation of the system that is sufficient for another developer to understand and run it.
+
+The context also mentions results and reflection from the comparison, relevant limitations, and possible improvements, but it's not explicitly stated that these must be in the synopsis (it says "Results and reflection..." as part of what the context is describing, but not clearly what must be in the synopsis).
+
+Let me re-read the context carefully.
+
+The context says: "Results and reflection from the linear regression versus local LLM + RAG comparison, relevant limitations, and possible improvements."
+
+This seems to be describing what the synopsis should contain, but it's not explicitly stated as "must" be in the synopsis. The context says "The setup guide is **not included** in the five-page synopsis limit. Document the system sufficiently for another developer to understand and run it."
+
+So the answer to "What must the synopsis contain?" is: The synopsis must document the system sufficiently for another developer to understand and run it.
+
+I'll formulate a clear, concise answer that follows the rules:
+- Only use what the context supports
+- Max 5 sentences
+- Clear, concise and neutral tone
+- For a student developer
+
+The answer is: The synopsis must document the system sufficiently for another developer to understand and run it. The setup guide is not included in the five-page limit. It should contain results and reflection from the linear regression versus local LLM + RAG comparison, relevant limitations, and possible improvements.
+
+Wait, let me double-check if all of these are explicitly stated as "must" be in the synopsis.
+
+The context explicitly states: "Document the system sufficiently for another developer to understand and run it." This is what the synopsis must contain.
+
+The context also mentions "Results and reflection from the linear regression versus local LLM + RAG comparison, relevant limitations, and possible improvements" but it's not explicitly stated as "must" be in the synopsis. It's more of what the context is describing.
+
+The context says: "The setup guide is **not included** in the five-page synopsis limit." So the synopsis must not include the setup guide.
+
+Let me re-read the question: "What must the synopsis contain?"
+
+So the answer should be: The synopsis must document the system sufficiently for another developer to understand and run it. The synopsis must contain results and reflection from the linear regression versus local LLM + RAG comparison, relevant limitations, and possible improvements.
+
+But I need to be careful - the context doesn't explicitly say that "results and reflection..." must be in the synopsis, it's just listed as what the context is describing. The context says "Results and reflection..." as part of the content that should be in the synopsis, but it's not explicitly stated as "must."
+
+Let me look for the clearest statement about what the synopsis must contain.
+
+The most direct statement is: "Document the system sufficiently for another developer to understand and run it."
+
+The context also says that "The setup guide is **not included** in the five-page synopsis limit." So the synopsis must not include the setup guide.
+
+But the question is asking what the synopsis must contain, not what it must not contain.
+
+So the answer should be: The synopsis must document the system sufficiently for another developer to understand and run it.
+
+Let me see if there's anything else.
+
+The context also mentions: "Do not let the LLM call the regression model or execute regression code to produce its predictions" but this is about what the system should not do, not what the synopsis must contain.
+
+I think the most accurate answer based on the context is: The synopsis must document the system sufficiently for another developer to understand and run it.
+
+I'll go with that, and make sure it's clear, concise and neutral.
+
+So my answer will be: The synopsis must document the system sufficiently for another developer to understand and run it.
+</think>
+
+The synopsis must document the system sufficiently for another developer to understand and run it. The setup guide is not included in the five-page limit. It should contain results and reflection from the linear regression versus local LLM + RAG comparison, relevant limitations, and possible improvements.
+
+=== WITHOUT retrieval ===
+Okay, the user is asking what a synopsis must contain. Hmm, this seems like a straightforward question about writing conventions, probably from someone working on a project—maybe a student, a writer, or a professional preparing a document.  
+
+First, I should clarify what context they mean. "Synopsis" can be tricky because it's used differently in academic vs. creative writing. For example, in academia, it's a short summary of research, while in storytelling, it's a plot outline. The user didn't specify, so I'll cover both briefly to be helpful.  
+
+The user also said "keep answers short," so I shouldn't over-explain. They might be in a hurry—like a student cramming for a deadline or a writer needing quick guidance. I'll focus on the absolute essentials without jargon.  
+
+For academic synopses: core is purpose, methods, key findings. For story synopses: conflict, characters, stakes. I'll list the bare minimum for each to stay concise.  
+
+Wait—should I add examples? Nah, they said "short." Just bullet points. Also, no fluff like "this is important because..."  
+
+*Double-checking*: Am I missing anything critical? Like, in business synopses, it might include objectives too. But since they didn't specify, I'll stick to the most universal cases.  
+
+Final call: Two clear, tight answers—one for academic, one for narrative. No more than 3 lines total. User seems efficient—they'll appreciate that.
+</think>
+
+A synopsis **must** contain:  
+1. **Core purpose** (what the work aims to achieve).  
+2. **Key elements** (main plot points, characters, or findings).  
+3. **Stakes or significance** (why it matters).  
+
+*Short version:* Purpose + essentials + impact. (Context matters: academic vs. creative).
+PS C:\Users\gervi\OneDrive\Skrivebord\Uddannelse\LLM Exam Project> 
