@@ -48,6 +48,7 @@ def chunk_text(text: str, size: int = 500, overlap: int = 100) -> list[str]:
 
 
 def load_chunks(size: int, overlap: int) -> list[dict]:
+    """Load chunks from docs."""
     items = []
     files = sorted(list(DOCS_DIR.glob("**/*.md")) + list(DOCS_DIR.glob("**/*.txt")))
     if not files:
@@ -61,6 +62,7 @@ def load_chunks(size: int, overlap: int) -> list[dict]:
 
 # ---------- 2. Embeddings ----------
 def embed(texts: list[str]) -> np.ndarray:
+    """Embed the given texts using the specified model."""
     r = requests.post(
         f"{OLLAMA}/api/embed",
         json={"model": EMBED_MODEL, "input": texts},
@@ -72,6 +74,7 @@ def embed(texts: list[str]) -> np.ndarray:
 
 # ---------- 3. Retrieval (cosine similarity, by hand) ----------
 def cosine_top_k(query_vec: np.ndarray, matrix: np.ndarray, k: int):
+    """Compute the top-k cosine similarity between the query vector and the matrix."""
     q = query_vec / np.linalg.norm(query_vec)
     m = matrix / np.linalg.norm(matrix, axis=1, keepdims=True)
     scores = m @ q
@@ -89,6 +92,7 @@ def strip_thinking(text: str) -> str:
 
 
 def chat(system: str, user: str) -> str:
+    """Chat with a model."""
     # Qwen3 understands "/no_think" as an instruction to skip its reasoning phase.
     # Only add it for Qwen3 models, other models would just see it as extra text.
     if "qwen3" in CHAT_MODEL.lower():
