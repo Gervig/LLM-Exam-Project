@@ -2,11 +2,9 @@
 Minimal RAG pipeline for learning purposes (no frameworks).
 
 Setup:
-    uv init
-    uv add requests numpy
+    uv sync
     ollama pull qwen3:4b
     ollama pull nomic-embed-text
-    mkdir docs   # put a few .md or .txt files in here
 
 Usage:
     python rag_starter.py "Your question here"
