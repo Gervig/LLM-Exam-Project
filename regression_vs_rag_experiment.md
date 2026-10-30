@@ -278,11 +278,12 @@ Open `linear_regression_vs_rag.ipynb` and run the cells from top to bottom.
 
 ## Appendix B. Raw replies (optional)
 
-The following examples show the raw LLM + RAG responses for two test cases. They are included to illustrate the model's reasoning process, the retrieved examples provided as context, and how the model arrived at its price estimates.
+The following examples show the raw LLM + RAG responses for two test cases. They illustrate the retrieved examples provided as context, the model's reasoning process, and how it arrived at its price estimates.
 
 ### Test case: 37 m²
 
 **Retrieved examples:**
+
 - 84 m² — 3,798 thousand DKK
 - 57 m² — 2,688 thousand DKK
 - 84 m² — 3,840 thousand DKK
@@ -291,11 +292,61 @@ The following examples show the raw LLM + RAG responses for two test cases. They
 
 **Raw model reply:**
 
-[Paste the raw 37 m² RAG response here.]
+> The problem requires estimating a price for a size of 37 based on given examples. A careful data analyst would use a linear regression model to account for the relationship between size and price, as this method provides a statistically sound estimate while avoiding assumptions about extrapolation beyond the data range.
+>
+> ### Step-by-Step Analysis
+>
+> 1. **Given Data Points:**
+>    - (57, 2688)
+>    - (63, 2956)
+>    - (84, 3798)
+>    - (84, 3840)
+>    - (137, 6283)
+>
+> 2. **Compute Regression Parameters:**
+>    - **Mean of x (size):** \( \bar{x} = 85 \)
+>    - **Mean of y (price):** \( \bar{y} = 3913 \)
+>    - **Slope (a):** \( a = \frac{898,910}{19,870} \approx 45.24 \)
+>    - **Intercept (b):** \( b = \bar{y} - a\bar{x} = 3913 - (45.24 \times 85) \approx 67.6 \)
+>
+> 3. **Regression Equation:**
+>
+>    \[
+>    y = 45.24x + 67.6
+>    \]
+>
+> 4. **Estimate for x = 37:**
+>
+>    \[
+>    y = 45.24 \times 37 + 67.6 \approx 1673.88 + 67.6 = 1741.48
+>    \]
+>
+> ### Why This Approach?
+>
+> - **Statistical Rigor:** Linear regression minimizes the squared error between observed and predicted values, making it a robust method for estimation.
+> - **Avoids Extrapolation Risks:** While 37 is smaller than all given sizes, the regression model accounts for the trend in the data without assuming unrealistic behavior outside the observed range.
+> - **Practical Relevance:** In real-world scenarios (e.g., real estate), such models are standard for estimating values based on historical data.
+>
+> ### Final Answer
+>
+> \[
+> \boxed{1741}
+> \]
+
+**Retrieved chunks and similarity scores:**
+
+| Similarity | Retrieved example |
+|---:|---|
+| 0.899 | 84 m² — 3,798 thousand DKK |
+| 0.898 | 57 m² — 2,688 thousand DKK |
+| 0.896 | 84 m² — 3,840 thousand DKK |
+| 0.893 | 63 m² — 2,956 thousand DKK |
+| 0.892 | 137 m² — 6,283 thousand DKK |
 
 ### Test case: 72 m²
 
 **Retrieved examples:**
+
 - 148 m² — 6,640 thousand DKK
 - 74 m² — 3,472 thousand DKK
 - 142 m² — 6,419 thousand DKK
@@ -304,6 +355,32 @@ The following examples show the raw LLM + RAG responses for two test cases. They
 
 **Raw model reply:**
 
-[Paste the raw 72 m² RAG response here.]
+> The problem involves estimating the price for a value of 72 using the given data points. The two closest data points to 72 are at 63 (price = 2956) and 74 (price = 3472).
+>
+> To interpolate between these two points:
+>
+> 1. Calculate the difference in price: \(3472 - 2956 = 516\).
+> 2. Determine the proportion of the interval from 63 to 74 that 72 represents: \(72 - 63 = 9\).
+> 3. Compute the interpolated price:
+>
+>    \[
+>    2956 + \left(\frac{9}{11}\right) \times 516
+>    = 2956 + 422.18
+>    = 3378.18
+>    \]
+>
+> Rounding to the nearest whole number gives **3378**.
+>
+> **Answer: 3378**
+
+**Retrieved chunks and similarity scores:**
+
+| Similarity | Retrieved example |
+|---:|---|
+| 0.896 | 148 m² — 6,640 thousand DKK |
+| 0.896 | 74 m² — 3,472 thousand DKK |
+| 0.895 | 142 m² — 6,419 thousand DKK |
+| 0.894 | 84 m² — 3,798 thousand DKK |
+| 0.892 | 63 m² — 2,956 thousand DKK |
 
 ---
