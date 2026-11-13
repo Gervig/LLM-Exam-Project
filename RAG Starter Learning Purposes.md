@@ -27,6 +27,9 @@ Four things from the first runs are ready-made examples for the reflection and l
 | A saved console output left in `docs/` was indexed and outranked the exam file (similarity 0.786 against 0.569 before). | Data quality: retrieval trusts similarity, not correctness, so a high score can point at the wrong text | Data preparation and the data-quality link to machine learning |
 | Qwen3 printed its reasoning before the answer, even with thinking switched off in the request. | Model behaviour: outputs may need post-processing, and settings differ between model and Ollama versions | Model behaviour and the implementation notes |
 
+# Regression RAG vs non RAG
+![figures/regression_vs_rag.png](figures/regression_vs_rag.png)
+
 ## Experiments to run next
 
 Change one thing per run and write down what happened, because those notes become evidence for the synopsis.
