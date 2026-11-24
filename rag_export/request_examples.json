@@ -1,0 +1,38 @@
+[
+  {
+    "id": "way/823046940",
+    "tier": "A",
+    "situation": "flats known",
+    "request": {
+      "requestType": "HOUSING_CAPACITY",
+      "useRag": true,
+      "context": "buildingType: apartment building\nfootprintM2: 950\nnumberOfLevels: 6\nnumberOfFlats: 102\nheightMeters: unknown"
+    },
+    "baseline_capacity": 184,
+    "baseline_basis": "102 flats x 1.8 persons per flat"
+  },
+  {
+    "id": "way/26659690",
+    "tier": "B",
+    "situation": "levels known, flats unknown, footprint known",
+    "request": {
+      "requestType": "HOUSING_CAPACITY",
+      "useRag": true,
+      "context": "buildingType: apartment building\nfootprintM2: 714\nnumberOfLevels: 5\nnumberOfFlats: unknown\nheightMeters: unknown"
+    },
+    "baseline_capacity": 71,
+    "baseline_basis": "footprint 714 m2 x 5 floors x 0.8 = 2858 m2 usable; 2858 / 40 m2 per person = 71.4"
+  },
+  {
+    "id": "way/25520727",
+    "tier": "D",
+    "situation": "levels unknown, flats unknown, footprint known",
+    "request": {
+      "requestType": "HOUSING_CAPACITY",
+      "useRag": true,
+      "context": "buildingType: apartment building\nfootprintM2: 652\nnumberOfLevels: unknown\nnumberOfFlats: unknown\nheightMeters: unknown"
+    },
+    "baseline_capacity": 65,
+    "baseline_basis": "footprint 652 m2 x 5 floors x 0.8 = 2608 m2 usable; 2608 / 40 m2 per person = 65.2; levels missing, median of similar buildings (5) used"
+  }
+]
