@@ -1,0 +1,57 @@
+{
+  "ollama_version": "0.40.18",
+  "chat_model": "qwen3:4b",
+  "embed_model": "nomic-embed-text",
+  "seed": 42,
+  "top_k": 5,
+  "temperature": 0.0,
+  "rag_prompt": "Traits: You are a careful data analyst who estimates apartment prices.\nTask: Predict the sale price of an apartment from its size, using the example sales given in the context.\nTone: Precise and matter-of-fact. No explanations.\nTarget: A script that parses your answer. Reply with JSON only, in the form {\"price_kdkk\": <number>}, where the number is the price in thousand DKK (so 1000 means 1 million DKK).",
+  "no_rag_prompt": "Traits: You are a careful data analyst who estimates apartment prices.\nTask: Predict the sale price of an apartment from its size, using your general knowledge of apartment prices in Denmark.\nTone: Precise and matter-of-fact. No explanations.\nTarget: A script that parses your answer. Reply with JSON only, in the form {\"price_kdkk\": <number>}, where the number is the price in thousand DKK (so 1000 means 1 million DKK).",
+  "raw_replies": [
+    {
+      "size_m2": 37,
+      "rag_replies": [
+        "{\n  \"price_kdkk\": 1524\n}"
+      ],
+      "no_rag_replies": [
+        "{\n  \"price_kdkk\": 120\n}"
+      ]
+    },
+    {
+      "size_m2": 72,
+      "rag_replies": [
+        "{\n  \"price_kdkk\": 3472\n}"
+      ],
+      "no_rag_replies": [
+        "{\n  \"price_kdkk\": 1200\n}"
+      ]
+    },
+    {
+      "size_m2": 78,
+      "rag_replies": [
+        "{\n  \"price_kdkk\": 4220\n}"
+      ],
+      "no_rag_replies": [
+        "{\n  \"price_kdkk\": 1200\n}"
+      ]
+    },
+    {
+      "size_m2": 106,
+      "rag_replies": [
+        "{\n  \"price_kdkk\": 4652\n}"
+      ],
+      "no_rag_replies": [
+        "{\n  \"price_kdkk\": 1200\n}"
+      ]
+    },
+    {
+      "size_m2": 107,
+      "rag_replies": [
+        "{\n  \"price_kdkk\": 4722\n}"
+      ],
+      "no_rag_replies": [
+        "{\n  \"price_kdkk\": 1000\n}"
+      ]
+    }
+  ]
+}
